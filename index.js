@@ -1,19 +1,19 @@
 const main = document.getElementsByTagName('main');
 
-function changeMain(subject) {
-    if (subject == 'info') {
+function changeMain(tab) {
+    if (tab == 'info') {
         main.innerHTML = 'info_html';
-    } else if (subject == 'matek') {
+    } else if (tab == 'matek') {
         main.innerHTML = 'mat_html';
-    } else if (subject == 'fizika') {
+    } else if (tab == 'fizika') {
         main.innerHTML = 'fiz_html';
-    } else if (subject == 'tori') {
+    } else if (tab == 'tori') {
         main.innerHTML = 'tor_html';
-    } else if (subject == 'magyar') {
+    } else if (tab == 'magyar') {
         main.innerHTML = 'magy_html';
-    } else if (subject == 'angol') {
+    } else if (tab == 'angol') {
         main.innerHTML = 'ang_html';
-    } else if (subject == 'nemet') {
+    } else if (tab == 'nemet') {
         main.innerHTML = 'nem_html';
     }
 }
