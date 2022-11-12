@@ -9,7 +9,7 @@
     <title>BTTS</title>
 </head>
 <body class="bg-gray-700 text-white flex flex-col md:flex-row w-screen h-screen">
-    <nav class="bg-gray-800 w-screen h-20 md:w-min flex md:h-screen justify-between items-center md:items-center md:justify-start md:flex-col md:p-2 overflow-y-auto">
+    <nav class="bg-gray-800 w-screen h-20 md:w-max flex md:h-screen justify-between items-center md:items-center md:justify-start md:flex-col md:p-2 overflow-y-auto">
         <h1 class="text-4xl font-bold m-2" id="top">BTTS</h1>
         <button class="m-2 w-16 h-16 md:w-0 md:h-0 relative overflow-hidden">
             <input type="checkbox" class="absolute inset-x-0 w-16 h-16 cursor-pointer opacity-0 peer/menu" id="nemu">
@@ -25,47 +25,51 @@
                     </svg>
                     <input type="text" class="bg-gray-600 rounded-md text-2xl sm:text-4xl text-center w-60 sm:w-96" placeholder="Search">
                 </div>
-                <h1 class="text-2xl sm:text-4xl p-2 border-b-2">Informatika</h1>
-                <h1 class="text-2xl sm:text-4xl p-2 border-b-2">Matek</h1>
-                <h1 class="text-2xl sm:text-4xl p-2 border-b-2">Fizika</h1>
-                <h1 class="text-2xl sm:text-4xl p-2 border-b-2">Történelem</h1>
-                <h1 class="text-2xl sm:text-4xl p-2 border-b-2">Magyar</h1>
-                <h1 class="text-2xl sm:text-4xl p-2 border-b-2">Angol</h1>
-                <h1 class="text-2xl sm:text-4xl p-2">Német</h1>
+                <h1 class="text-2xl sm:text-4xl p-2 border-b-2" onclick="changeMain('info', this)">Informatika</h1>
+                <h1 class="text-2xl sm:text-4xl p-2 border-b-2" onclick="changeMain('matek', this)">Matek</h1>
+                <h1 class="text-2xl sm:text-4xl p-2 border-b-2" onclick="changeMain('fizika', this)">Fizika</h1>
+                <h1 class="text-2xl sm:text-4xl p-2 border-b-2" onclick="changeMain('tori', this)">Történelem</h1>
+                <h1 class="text-2xl sm:text-4xl p-2 border-b-2" onclick="changeMain('magyar', this)">Magyar</h1>
+                <h1 class="text-2xl sm:text-4xl p-2 border-b-2" onclick="changeMain('angol', this)">Angol</h1>
+                <h1 class="text-2xl sm:text-4xl p-2" onclick="changeMain('nemet', this)">Német</h1>
             </div>
         </button>
         <div class="bg-gray-600 rounded-xl hidden md:flex md:border-2 md:border-white w-0 md:w-full max-h-min md:my-2 items-center">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10 border-r-2 border-gray-500">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
             </svg>
-            <input type="text" class="bg-gray-600 h-8 text-center focus:outline-none" placeholder="Search">
+            <input type="text" class="bg-gray-600 h-8 text-center focus:outline-none w-full rounded text-2xl" placeholder="Search">
         </div>
-        <button class="bg-gray-800 hover:bg-indigo-600 rounded-xl hidden md:block md:border-2 md:border-white w-0 md:w-full md:my-2" onclick="changeMain('info')">
+        <button class="bg-gray-800 hover:bg-indigo-600 rounded-xl hidden md:block md:border-2 md:border-white w-0 md:w-full md:my-2" onclick="changeMain('info', this)">
             <h1 class="text-2xl sm:text-4xl p-2">Informatika</h1>
         </button>
-        <button class="bg-gray-800 hover:bg-indigo-600 rounded-xl hidden md:block md:border-2 md:border-white w-0 md:w-full md:my-2" onclick="changeMain('matek')">
+        <button class="bg-gray-800 hover:bg-indigo-600 rounded-xl hidden md:block md:border-2 md:border-white w-0 md:w-full md:my-2" onclick="changeMain('matek', this)">
             <h1 class="text-2xl sm:text-4xl p-2">Matek</h1>
         </button>
-        <button class="bg-gray-800 hover:bg-indigo-600 rounded-xl hidden md:block md:border-2 md:border-white w-0 md:w-full md:my-2" onclick="changeMain('fizika')">
+        <button class="bg-gray-800 hover:bg-indigo-600 rounded-xl hidden md:block md:border-2 md:border-white w-0 md:w-full md:my-2" onclick="changeMain('fizika', this)">
             <h1 class="text-2xl sm:text-4xl p-2">Fizika</h1>
         </button>
-        <button class="bg-gray-800 hover:bg-indigo-600 rounded-xl hidden md:block md:border-2 md:border-white w-0 md:w-full md:my-2" onclick="changeMain('tori')">
+        <button class="bg-gray-800 hover:bg-indigo-600 rounded-xl hidden md:block md:border-2 md:border-white w-0 md:w-full md:my-2" onclick="changeMain('tori', this)">
             <h1 class="text-2xl sm:text-4xl p-2">Történelem</h1>
         </button>
-        <button class="bg-gray-800 hover:bg-indigo-600 rounded-xl hidden md:block md:border-2 md:border-white w-0 md:w-full md:my-2" onclick="changeMain('magyar')">
+        <button class="bg-gray-800 hover:bg-indigo-600 rounded-xl hidden md:block md:border-2 md:border-white w-0 md:w-full md:my-2" onclick="changeMain('magyar', this)">
             <h1 class="text-2xl sm:text-4xl p-2">Magyar</h1>
         </button>
-        <button class="bg-gray-800 hover:bg-indigo-600 rounded-xl hidden md:block md:border-2 md:border-white w-0 md:w-full md:my-2" onclick="changeMain('angol')">
+        <button class="bg-gray-800 hover:bg-indigo-600 rounded-xl hidden md:block md:border-2 md:border-white w-0 md:w-full md:my-2" onclick="changeMain('angol', this)">
             <h1 class="text-2xl sm:text-4xl p-2">Angol</h1>
         </button>
-        <button class="bg-gray-800 hover:bg-indigo-600 rounded-xl hidden md:block md:border-2 md:border-white w-0 md:w-full md:my-2" onclick="changeMain('nemet')">
+        <button class="bg-gray-800 hover:bg-indigo-600 rounded-xl hidden md:block md:border-2 md:border-white w-0 md:w-full md:my-2" onclick="changeMain('nemet', this)">
             <h1 class="text-2xl sm:text-4xl p-2">Német</h1>
         </button>
     </nav>
-    <main class="bg-gray-700 w-full h-full p-4 overflow-y-scroll" id="main">
-        <h1 class="text-4xl h-[1000px]">asd</h1>
+    <main class="bg-gray-700 w-full h-full p-4 overflow-y-scroll">
+        <h1 class="text-2xl md:text-4xl text-center font-bold mb-2" id="title">BTTS</h1>
+        <div class="bg-gray-700 w-full h-full" id="content">
+
+        </div>
+
     </main>
-    <a href="#top" class="fixed right-10 p-2 bottom-10 bg-gray-900 rounded-full text-gray-100 text-3xl hover:translate-y-[-0.25rem] transition-all">
+    <a href="#title" class="fixed right-10 p-2 bottom-10 bg-gray-900 rounded-full text-gray-100 text-3xl hover:translate-y-[-0.25rem] transition-all">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
             <path stroke-linecap="round" stroke-linejoin="round" d="M12 19.5v-15m0 0l-6.75 6.75M12 4.5l6.75 6.75" />
         </svg>          
